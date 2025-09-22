@@ -1,0 +1,252 @@
+/* ===============================
+   FONTES
+================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+/* ===============================
+   VARIÁVEIS DE CORES
+================================= */
+:root {
+  --primaria: #E10600; /* vermelho Neymar */
+  --preto: #000000;
+  --branco: #ffffff;
+  --cinza-claro: #F2F2F2;
+  --cinza-escuro: #333333;
+
+  /* Alto contraste */
+  --alto-contraste-fundo: #000000;
+  --alto-contraste-texto: #ffffff;
+  --alto-contraste-link: #ffffff;
+}
+
+/* ===============================
+   RESET E BODY
+================================= */
+body {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--branco);
+  color: var(--preto);
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   HEADER
+================================= */
+header {
+  background-color: var(--preto);
+  color: var(--branco);
+  padding: 1rem 2rem;
+}
+
+/* ===============================
+   LINKS DE NAVEGAÇÃO
+================================= */
+.nav-link {
+  color: var(--primaria);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+/* ===============================
+   SEÇÕES
+================================= */
+section {
+  padding-bottom: 5rem;
+}
+
+/* ===============================
+   INÍCIO - FUNDO
+================================= */
+.inicio-fundo {
+  background-image: url('img/neymar-fundo.jpg'); /* coloque a URL correta */
+  background-position: center;
+  background-size: cover;
+  border-radius: 80px;
+  width: 100%;
+  height: 606px;
+  padding: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Imagem dentro da seção início */
+.img-inicio {
+  position: absolute;
+  right: 0;
+  top: 18rem;
+  width: 45rem;
+  height: auto;
+}
+
+/* Conteúdo à esquerda */
+.esquerda-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Botão principal */
+.botao-inicio {
+  background-color: var(--primaria);
+  border-radius: 30px;
+  border: none;
+  width: 14em;
+  height: 3em;
+  color: var(--branco);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-inicio:hover {
+  opacity: 0.9;
+}
+
+/* Título com efeito */
+.display-4 {
+  text-shadow: -5px 5px var(--primaria);
+  font-family: 'Lemon', serif;
+}
+
+/* ===============================
+   SEÇÃO NEYMAR
+================================= */
+#Neymar {
+  position: relative;
+  padding-top: 5rem;
+  margin: 3rem 0;
+  background: url('img/neymar-cima.jpg') top right no-repeat,
+              url('img/neymar-baixo.jpg') bottom left no-repeat; /* trocar URLs */
+  background-size: 180px 180px;
+}
+
+#Neymar .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+#Neymar h2 {
+  font-family: 'Lemon', serif;
+  font-size: 2.5em;
+  color: var(--primaria);
+}
+
+/* ===============================
+   GALERIA
+================================= */
+#galeria {
+  background-color: var(--cinza-claro);
+}
+
+.fundo-galeria {
+  background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+  background-size: 180px 180px;
+}
+
+/* ===============================
+   CONTATO
+================================= */
+#contato {
+  background-image: url('img/4965007.jpg'); /* trocar URL */
+  background-size: cover;
+  padding: 4rem 0;
+}
+
+.formulario {
+  background-color: var(--branco);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+.formulario button {
+  background-color: var(--primaria);
+  border: none;
+  color: var(--branco);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Campos de formulário */
+.form-control {
+  background-color: #E9E9E9;
+}
+
+/* ===============================
+   ACESSIBILIDADE
+================================= */
+.menu-acessibilidade {
+  position: fixed;
+  top: 2rem;
+  right: 20px;
+  z-index: 1000;
+}
+
+.rotacao-botao {
+  transform: rotate(-90deg);
+  transform-origin: right center;
+}
+
+.opcoes-acessibilidade {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+  margin-bottom: 5px;
+}
+
+.apresenta-lista {
+  display: none;
+}
+
+/* Alto contraste */
+.alto-contraste {
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario,
+.alto-contraste #galeria {
+  background-color: var(--alto-contraste-fundo);
+  color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link,
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button {
+  background-color: var(--alto-contraste-link);
+  color: var(--alto-contraste-fundo);
+}
+
+/* ===============================
+   BOTOES PRETO
+================================= */
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.btn-black:hover {
+  background-color: #333;
+}
